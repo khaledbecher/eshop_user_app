@@ -145,7 +145,7 @@ class FirestoreClient {
         fieldName: newFieldValue,
       });
     } catch (e) {
-      throw Exception("Error removing from list field '$fieldName': $e");
+      throw Exception("Error updating field '$fieldName': $e");
     }
   }
 
@@ -160,7 +160,7 @@ class FirestoreClient {
         fieldName: FieldValue.increment(offset),
       });
     } catch (e) {
-      throw Exception("Error removing from list field '$fieldName': $e");
+      throw Exception("Error incrementing field value '$fieldName': $e");
     }
   }
 }
